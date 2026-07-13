@@ -34,7 +34,6 @@
   a{color:inherit;text-decoration:none;}
   .display{font-family:'Unbounded',sans-serif;}
 
-  /* background texture */
   body::before{
     content:"";
     position:fixed;inset:0;
@@ -47,7 +46,6 @@
 
   .wrap{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
 
-  /* HEADER */
   header{
     position:sticky;top:0;z-index:50;
     background:rgba(10,10,16,0.75);
@@ -116,7 +114,6 @@
   .lang-option.active{color:var(--neon-green);}
   .lang-option.active::after{content:"✓";font-size:12px;}
 
-  /* HERO */
   .hero{
     padding:88px 0 64px;
     display:grid;
@@ -190,7 +187,6 @@
     color:var(--text-muted);
   }
 
-  /* SIGNATURE — curve chart */
   .curve-card{
     background:linear-gradient(180deg, var(--bg-surface), var(--bg-surface-2));
     border:1px solid var(--line);
@@ -227,7 +223,6 @@
     text-align:center;
   }
 
-  /* SECTION shared */
   section{padding:72px 0;position:relative;z-index:1;}
   .section-head{margin-bottom:40px;max-width:600px;}
   .section-eyebrow{
@@ -243,7 +238,6 @@
   }
   .section-head p{color:var(--text-muted);font-size:15px;line-height:1.6;}
 
-  /* GAME CARDS */
   .games{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
   .game-card{
     background:var(--bg-surface);
@@ -283,7 +277,6 @@
   .jet .btn-primary{background:var(--neon-magenta);color:#1a0510;}
   .jet .btn-primary:hover{box-shadow:0 0 28px rgba(255,46,126,0.45);}
 
-  /* TERMS */
   .terms-box{
     background:var(--bg-surface);
     border:1px solid var(--line);
@@ -346,7 +339,58 @@
     padding:3px 8px;border-radius:6px;
   }
 
-  /* FOOTER */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:24px;
+    margin-top:20px;
+  }
+  .contact-card{
+    background:var(--bg-surface);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px 20px;
+    text-align:center;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .contact-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--neon-green);
+  }
+  .contact-card .contact-icon{
+    font-size:36px;
+    display:block;
+    margin-bottom:12px;
+  }
+  .contact-card h4{
+    font-family:'Unbounded',sans-serif;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .contact-card p{
+    font-size:13px;
+    color:var(--text-muted);
+    margin-bottom:16px;
+  }
+  .contact-card .btn-small{
+    display:inline-block;
+    padding:8px 20px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+    background:var(--neon-green);
+    color:#08140d;
+    transition:box-shadow .2s ease;
+  }
+  .contact-card .btn-small:hover{
+    box-shadow:0 0 20px rgba(60,255,156,0.35);
+  }
+  .contact-card.telegram .btn-small{background:#0088cc;color:#fff;}
+  .contact-card.telegram .btn-small:hover{box-shadow:0 0 20px rgba(0,136,204,0.4);}
+  .contact-card.support .btn-small{background:var(--neon-magenta);color:#1a0510;}
+  .contact-card.support .btn-small:hover{box-shadow:0 0 20px rgba(255,46,126,0.4);}
+
   footer{
     border-top:1px solid var(--line);
     padding:48px 0 32px;
@@ -370,6 +414,10 @@
     .games{grid-template-columns:1fr;}
     .terms-box{grid-template-columns:1fr;padding:28px;}
     .header-inner{flex-direction:row;}
+    .contact-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:480px){
+    .contact-grid{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -472,9 +520,8 @@
         <li><span class="num">02</span><div data-i18n="term2"><b>Dasturni yuklab oling</b>Signal bashoratchi dasturlaridan birini yuklab oling va kiring.</div></li>
         <li><span class="num">03</span><div data-i18n="term3"><b>ID Password kiriting</b>1winda bizning SYRAX proma-kodimiz bilan ro'yhatdan o'tib 1mln so'm depozit qilganingizdan so'ng 1win ID raqamingiz avtomatik dasturga faollashtiriladi va login vazifasini bajaradi va shu ID raqamingizni dasturga yozib kirasiz.</div></li>
         <li><span class="num">04</span><div data-i18n="term4"><b>Ko'p ishlamang</b>Signal bashoratchi dasturi yordamida 1-2ta dan ortiq ishlamang, sababi 1win kelgusi yutuqlaringizda sizdan shubhalanib akkauntingizni qora ro'yhatga qo'shib blok qilishi va qonuniy javobgarlikga olib kelishi mo'mkin.</div></li>
-        <li><span class="num">05</span><div data-i18n="term4"><b>Savollar?</b>Dastur nima uchun bepul va bundan sizga nma foyda? Bu dasturni faqat o'zimiz ishlatsakham bo'ladi lekin bitta verifikatsiyalangan akkauntdan ko'p pul yechsak yoki ketmaket faqat g'alaba qozonsak bukmekir bizni qora ruyhatga qo'shadi va akkauntimizni blok qiladi. Siz bizni promakodimiz bilan ro'yhatdan o'tib dasturni ishlatib foyda qilsangiz foydangizni 50% ni bukmekirni bizga o'zini yonidan o'tkazib turadi, shu sababdan bizga ko'proq foydalanuvchilar kerak va shu sababdan bizham sizham foyda qilamiz</div></li>
+        <li><span class="num">05</span><div data-i18n="term5"><b>Savollar?</b>Dastur nima uchun bepul va bundan sizga nma foyda? Bu dasturni faqat o'zimiz ishlatsakham bo'ladi lekin bitta verifikatsiyalangan akkauntdan ko'p pul yechsak yoki ketmaket faqat g'alaba qozonsak bukmekir bizni qora ruyhatga qo'shadi va akkauntimizni blok qiladi. Siz bizni promakodimiz bilan ro'yhatdan o'tib dasturni ishlatib foyda qilsangiz foydangizni 50% ni bukmekirni bizga o'zini yonidan o'tkazib turadi, shu sababdan bizga ko'proq foydalanuvchilar kerak va shu sababdan bizham sizham foyda qilamiz.</div></li>       
       </ul>
-
       <div>
         <div class="video-slot">
           <div class="play-ic">▶</div>
@@ -482,6 +529,39 @@
         </div>
         <div class="age-flag" data-i18n="ageFlag"><b>18+</b> O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelshi mo'mkin.</div>
       </div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="contact">
+    <div class="section-head">
+      <span class="section-eyebrow" data-i18n="contactEyebrow">Biz bilan bog'lanish</span>
+      <h2 data-i18n="contactTitle">Ijtimoiy tarmoqlar va yordam</h2>
+      <p data-i18n="contactLead">Bizni kuzatib boring va har qanday savolingiz bo'lsa yozing.</p>
+    </div>
+
+    <div class="contact-grid">
+      <a href="https://instagram.com/syrax_official" target="_blank" class="contact-card" style="text-decoration:none;">
+        <span class="contact-icon">📸</span>
+        <h4>Instagram</h4>
+        <p>@syrax_official</p>
+        <span class="btn-small">Kuzatib borish</span>
+      </a>
+
+      <a href="https://t.me/syrax_channel" target="_blank" class="contact-card telegram" style="text-decoration:none;">
+        <span class="contact-icon">📢</span>
+        <h4>Telegram Kanal</h4>
+        <p>Yangiliklar va yangilanishlar</p>
+        <span class="btn-small">Obuna bo'lish</span>
+      </a>
+
+      <a href="https://t.me/syrax_support_bot" target="_blank" class="contact-card support" style="text-decoration:none;">
+        <span class="contact-icon">👨‍💻</span>
+        <h4>Yordam boti</h4>
+        <p>Support xizmati</p>
+        <span class="btn-small">Xabar yozish</span>
+      </a>
     </div>
   </section>
 </div>
@@ -497,10 +577,9 @@
 </footer>
 
 <script>
-  // ---- Til almashtirish / Переключение языка ----
   const translations = {
     uz: {
-      heroEyebrow: "Syrax rasmiy sayti",
+      heroEyebrow: "SYRAX rasmiy sayti",
       heroTitle: `Hush kelibsiz. <span class="accent">Bizga qo'shiling</span>`,
       heroLead: "Lucky Jet va Aviator signal bashoratchi dasturlarimizni yuklab oling va ular yordamida signallarni oldindan ko'rib foyda qiling. (Bizda barchasi bepul).",
       heroCtaPrimary: "1win'ga o'tish →",
@@ -512,8 +591,8 @@
       curveCrashedSuffix: " — qayta boshlanmoqda...",
       gamesEyebrow: "Bizning dasturlar",
       gamesTitle: "Ikkita o'yin, bitta kirish nuqtasi",
-      gamesLead: "Har ikkala dastur ham to'g'ridan-to'g'ri 1win platformasidagi tegishli o'yinlar uchun maxsus ishlab chiqarilgan.",
-      jetDesc: "Lucky Jet o'yini uchun signal bashoratchi dasturi (Android uchun.",
+      gamesLead: "Har ikkala dastur ham to'g'ridan-to'g'ri 1win platformasidagi tegishli o'yinlar uchun maxsus ishlab chiqarilgan",
+      jetDesc: "Lucky Jet o'yini uchun signal bashoratchi dasturi (Android uchun)",
       metaTypeLabel: "Turi",
       crashLabel: "Crash o'yin",
       metaProviderLabel: "Provayder",
@@ -523,23 +602,26 @@
       termsEyebrow: "Qo'llanma",
       termsTitle: "ID Faollashtirish shartlari",
       termsLead: "Dasturlardan foydalanishdan oldin quyidagilarni o'qib chiqing.",
-      term1: `<b>Ro'yxatdan o'ting</b>SYRAX promo-kodi bilan 1win'da yangi hisob oching va 1mln so'm depozit qiling shunda 1win ID raqamingiz dasturga avtomatik faollashtiriladi.`,
+      term1: `<b>Ro'yxatdan o'ting</b>SYRAX promo-kodi bilan 1win'da yangi hisob oching va 1mln so'm depozit qiling shunda 1win ID raqamingiz dasturga avtomatik faollashtiriladi`,
       term2: `<b>Dasturni yuklab oling</b>Signal bashoratchi dasturlaridan birini yuklab oling va kiring.`,
       term3: `<b>ID Password kiriting</b>1winda bizning SYRAX proma-kodimiz bilan ro'yhatdan o'tib 1mln so'm depozit qilganingizdan so'ng 1win ID raqamingiz avtomatik dasturga faollashtiriladi va login vazifasini bajaradi va shu ID raqamingizni dasturga yozib kirasiz.`,
       term4: `<b>Ko'p ishlamang</b>Signal bashoratchi dasturi yordamida 1-2ta dan ortiq ishlamang, sababi 1win kelgusi yutuqlaringizda sizdan shubhalanib akkauntingizni qora ro'yhatga qo'shib blok qilishi va qonuniy javobgarlikga olib kelishi mo'mkin.`,
-      term5: `<b>Savollar</b>Dastur nima uchun bepul va bundan sizga nma foyda? Bu dasturni faqat o'zimiz ishlatsakham bo'ladi lekin bitta verifikatsiyalangan akkauntdan ko'p pul yechsak yoki ketmaket faqat g'alaba qozonsak bukmekir bizni qora ruyhatga qo'shadi va akkauntimizni blok qiladi. Siz bizni promakodimiz bilan ro'yhatdan o'tib dasturni ishlatib foyda qilsangiz foydangizni 50% ni bukmekirni bizga o'zini yonidan o'tkazib turadi, shu sababdan bizga ko'proq foydalanuvchilar kerak va shu sababdan bizham sizham foyda qilamiz.`,
+      term5: `<b>Savollar?</b>Dastur nima uchun bepul va bundan sizga nma foyda? Bu dasturni faqat o'zimiz ishlatsakham bo'ladi lekin bitta verifikatsiyalangan akkauntdan ko'p pul yechsak yoki ketmaket faqat g'alaba qozonsak bukmekir bizni qora ruyhatga qo'shadi va akkauntimizni blok qiladi. Siz bizni promakodimiz bilan ro'yhatdan o'tib dasturni ishlatib foyda qilsangiz foydangizni 50% ni bukmekirni bizga o'zini yonidan o'tkazib turadi, shu sababdan bizga ko'proq foydalanuvchilar kerak va shu sababdan bizham sizham foyda qilamiz.`,
       videoSlot: `Video qo'llanma tez orada qo'shiladi.<br>Hozircha yuqoridagi bosqichlarga amal qiling.`,
-      ageFlag: `<b>18+</b> O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelishi mo'mkin.`,
+      ageFlag: `<b>18+</b> O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelshi mo'mkin.`,
       footerPromo: `Ro'yxatdan o'tishda promo-kod: <b>SYRAX</b>`,
-      footerLegal: "SYRAX — 1win platformasi foydalanuvchilari uchun oldindan signal bashorat qilib beraoladigan dastur muhandisi."
+      footerLegal: "SYRAX — 1win platformasi foydalanuvchilari uchun oldindan signal bashorat qilib beraoladigan dastur muhandisi.",
+      contactEyebrow: "Biz bilan bog'lanish",
+      contactTitle: "Ijtimoiy tarmoqlar va yordam",
+      contactLead: "Bizni kuzatib boring va har qanday savolingiz bo'lsa yozing."
     },
     ru: {
-      heroEyebrow: "Официальный сайт syrax",
+      heroEyebrow: "Официальный сайт SYRAX",
       heroTitle: `Добро пожаловать. <span class="accent">Присоединяйтесь к нам</span>`,
       heroLead: "Скачайте наши программы для прогнозирования сигналов Lucky Jet и Aviator и используйте их для предварительного просмотра сигналов и получения прибыли. (Все бесплатно).",
       heroCtaPrimary: "Перейти на 1win →",
-      heroCtaGhost: "Посмотреть программу",
-      heroDisclaimer: "18+. Результаты игры определяются на основе генератора случайных чисел (ГСЧ), и наша программа имеет возможность предсказывать этот генератор чисел заранее, что является незаконным и может повлечь за собой юридическую ответственность.",
+      heroCtaGhost: "Посмотреть программы",
+      heroDisclaimer: "18+ Результаты игры определяются на основе генератора случайных чисел (ГСЧ), и наша программа имеет возможность предсказывать этот генератор чисел заранее, что является незаконным и может повлечь за собой юридическую ответственность.",
       curveLabel: "Коэффициент в реальном времени",
       curveFlying: "Полёт начался...",
       curveCrashedPrefix: "Улетел! x",
@@ -551,7 +633,7 @@
       metaTypeLabel: "Тип",
       crashLabel: "Краш-игра",
       metaProviderLabel: "Провайдер",
-      jetBtn: "Скачат→",
+      jetBtn: "Скачать→",
       aviatorDesc: "Программа прогнозирования сигналов для игры Aviator (Для Android) Пароль - SYRAX",
       aviatorBtn: "Скачать→",
       termsEyebrow: "Инструкция",
@@ -565,15 +647,19 @@
       videoSlot: `Видеоинструкция появится позже.<br>А пока следуйте шагам выше.`,
       ageFlag: `<b>18+</b> Результаты игры определяются на основе генератора случайных чисел (ГСЧ), и наша программа имеет возможность предсказывать этот генератор чисел заранее, что является незаконным и может повлечь за собой юридическую ответственность.`,
       footerPromo: `Промокод при регистрации: <b>SYRAX</b>`,
-      footerLegal: "SYRAX — инженер-программист, способный прогнозировать сигналы заранее для пользователей платформы 1win."
+      footerLegal: "SYRAX — инженер-программист, способный прогнозировать сигналы заранее для пользователей платформы 1win.",
+      contactEyebrow: "Связаться с нами",
+      contactTitle: "Социальные сети и поддержка",
+      contactLead: "Следите за нами и пишите, если у вас есть вопросы."
     },
     en: {
-      heroEyebrow: "Official site syrax",
+      heroEyebrow: "Official site SYRAX",
       heroTitle: `Welcome. <span class="accent">Join us</span>`,
       heroLead: "Download our Lucky Jet and Aviator signal predictor programs and use them to preview signals and profit (we have them all for free).",
       heroCtaPrimary: "Go to 1win →",
       heroCtaGhost: "View programs",
       heroDisclaimer: "18+ The game results are determined based on a random number generator (RNG), and our program has the ability to predict this number generator in advance, which is illegal and may result in legal liability",
+      curveLabel: "Live coefficient",
       curveFlying: "Flight in progress...",
       curveCrashedPrefix: "Flew away! x",
       curveCrashedSuffix: " — restarting...",
@@ -598,7 +684,10 @@
       videoSlot: `A video guide is coming soon.<br>For now, follow the steps above.`,
       ageFlag: `<b>18+</b>The game results are determined based on a random number generator (RNG), and our program has the ability to predict this number generator in advance, which is illegal and may result in legal liability`,
       footerPromo: `Promo code at sign-up: <b>SYRAX</b>`,
-      footerLegal: "SYRAX — a software engineer who can predict signals in advance for users of the 1win platform."
+      footerLegal: "SYRAX — a software engineer who can predict signals in advance for users of the 1win platform.",
+      contactEyebrow: "Contact us",
+      contactTitle: "Social networks and support",
+      contactLead: "Follow us and write if you have any questions."
     }
   };
 
@@ -651,7 +740,6 @@
     if(!langSwitcher.contains(e.target)) closeLangMenu();
   });
 
-  // Crash-curve signature animation: shared visual language of Aviator & Lucky Jet
   const canvas = document.getElementById('curveCanvas');
   const ctx = canvas.getContext('2d');
   const multiEl = document.getElementById('multiVal');
@@ -672,14 +760,8 @@
 
   let t = 0;
   let crashAt = 3 + Math.random()*4;
-  let phase = 'flying'; // flying | crashed
+  let phase = 'flying';
   let phaseTimer = 0;
-
-  function curveY(x, w, h){
-    // exponential-ish ascent mapped into the canvas
-    const m = Math.pow(1.00, x);
-    return h - (Math.min(x,1) * h * 0.85) - 10;
-  }
 
   function draw(){
     resize();
@@ -687,7 +769,6 @@
     const h = canvas.getBoundingClientRect().height;
     ctx.clearRect(0,0,w,h);
 
-    // grid
     ctx.strokeStyle = 'rgba(255,255,255,0.05)';
     ctx.lineWidth = 1;
     for(let i=1;i<4;i++){
@@ -700,7 +781,6 @@
     multiEl.textContent = 'x' + multiplier.toFixed(2);
     multiEl.classList.toggle('crashed', phase === 'crashed');
 
-    // build path
     const progress = Math.min(elapsed / crashAt, 1);
     ctx.beginPath();
     const steps = 60;
@@ -722,7 +802,6 @@
     ctx.stroke();
     ctx.shadowBlur = 0;
 
-    // fill under curve
     ctx.lineTo(progress*w, h);
     ctx.lineTo(0,h);
     ctx.closePath();
@@ -732,7 +811,6 @@
     ctx.fillStyle = fillGrad;
     ctx.fill();
 
-    // marker (plane/jet) at curve tip
     if(phase === 'flying'){
       const px = progress * w;
       const yNorm = Math.pow(progress, 1.5);
