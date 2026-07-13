@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SYRAX — Lucky Jet & Aviator | Syrax rasmiy sayti</title>
+<title>SYRAX — Lucky Jet & Aviator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -282,9 +282,6 @@
     border:1px solid var(--line);
     border-radius:20px;
     padding:40px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
   }
   .terms-list{list-style:none;}
   .terms-list li{
@@ -304,40 +301,6 @@
     flex-shrink:0;
   }
   .terms-list li b{color:var(--text-primary);display:block;margin-bottom:2px;font-weight:600;}
-  .video-slot{
-    border:1px dashed var(--line);
-    border-radius:16px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    padding:40px 20px;
-    text-align:center;
-    color:var(--text-muted);
-    font-size:13px;
-    background:repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 10px, transparent 10px 20px);
-  }
-  .video-slot .play-ic{
-    width:52px;height:52px;border-radius:50%;
-    border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
-    font-size:18px;color:var(--neon-green);
-  }
-  .age-flag{
-    display:inline-flex;align-items:center;gap:8px;
-    margin-top:28px;
-    font-size:12px;
-    color:var(--text-muted);
-    border-top:1px solid var(--line);
-    padding-top:20px;
-  }
-  .age-flag b{
-    color:var(--neon-magenta);
-    font-family:'Unbounded',sans-serif;
-    border:1px solid rgba(255,46,126,0.4);
-    padding:3px 8px;border-radius:6px;
-  }
 
   .contact-grid{
     display:grid;
@@ -404,21 +367,16 @@
   .footer-inner{
     display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
   }
-  .footer-promo{
-    font-size:13px;color:var(--text-muted);
-  }
-  .footer-promo b{color:var(--neon-green);font-family:'Unbounded',sans-serif;}
   .footer-legal{
     font-size:11px;color:var(--text-muted);
     max-width:640px;
     line-height:1.6;
-    margin-top:24px;
   }
 
   @media (max-width:840px){
     .hero{grid-template-columns:1fr;padding-top:48px;}
     .games{grid-template-columns:1fr;}
-    .terms-box{grid-template-columns:1fr;padding:28px;}
+    .terms-box{padding:28px;}
     .header-inner{flex-direction:row;}
     .contact-grid{grid-template-columns:1fr 1fr;}
   }
@@ -516,7 +474,7 @@
   <section id="terms">
     <div class="section-head">
       <span class="section-eyebrow" data-i18n="termsEyebrow">Qo'llanma</span>
-      <h2 data-i18n="termsTitle">ID Faollashtirish shartlari</h2>
+      <h2 data-i18n="termsTitle">ID Faollashtirish Qo'llanmasi</h2>
       <p data-i18n="termsLead">Dasturlardan foydalanishdan oldin quyidagilarni o'qib chiqing.</p>
     </div>
 
@@ -528,13 +486,6 @@
         <li><span class="num">04</span><div data-i18n="term4"><b>Ko'p ishlamang</b>Signal bashoratchi dasturi yordamida 1-2ta dan ortiq ishlamang, sababi 1win kelgusi yutuqlaringizda sizdan shubhalanib akkauntingizni qora ro'yhatga qo'shib blok qilishi va qonuniy javobgarlikga olib kelishi mo'mkin.</div></li>
         <li><span class="num">05</span><div data-i18n="term5"><b>Savollar?</b>Dastur nima uchun bepul va bundan sizga nma foyda? Bu dasturni faqat o'zimiz ishlatsakham bo'ladi lekin bitta verifikatsiyalangan akkauntdan ko'p pul yechsak yoki ketmaket faqat g'alaba qozonsak bukmekir bizni qora ruyhatga qo'shadi va akkauntimizni blok qiladi. Siz bizni promakodimiz bilan ro'yhatdan o'tib dasturni ishlatib foyda qilsangiz foydangizni 50% ni bukmekirni bizga o'zini yonidan o'tkazib turadi, shu sababdan bizga ko'proq foydalanuvchilar kerak va shu sababdan bizham sizham foyda qilamiz.</div></li>       
       </ul>
-      <div>
-        <div class="video-slot">
-          <div class="play-ic">▶</div>
-          <div data-i18n="videoSlot">Video qo'llanma tez orada qo'shiladi.<br>Hozircha yuqoridagi bosqichlarga amal qiling.</div>
-        </div>
-        <div class="age-flag" data-i18n="ageFlag"><b>18+</b> O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelshi mo'mkin.</div>
-      </div>
     </div>
   </section>
 </div>
@@ -548,7 +499,6 @@
     </div>
 
     <div class="contact-grid">
-      <!-- Instagram -->
       <a href="https://instagram.com/syrax_official" target="_blank" class="contact-card" style="text-decoration:none;">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -562,7 +512,6 @@
         <span class="btn-small">Kuzatib borish</span>
       </a>
 
-      <!-- Telegram Kanal -->
       <a href="https://t.me/syrax_channel" target="_blank" class="contact-card telegram" style="text-decoration:none;">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -576,7 +525,6 @@
         <span class="btn-small">Obuna bo'lish</span>
       </a>
 
-      <!-- Telegram Support / Chat Bot -->
       <a href="https://t.me/syrax_support_bot" target="_blank" class="contact-card support" style="text-decoration:none;">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -596,7 +544,6 @@
   <div class="wrap">
     <div class="footer-inner">
       <div class="logo" style="font-size:18px;">SYRA<span>X</span></div>
-      <div class="footer-promo" data-i18n="footerPromo">Ro'yxatdan o'tishda promo-kod: <b>SYRAX</b></div>
     </div>
     <p class="footer-legal" data-i18n="footerLegal">SYRAX — 1win platformasi foydalanuvchilari uchun oldindan signal bashorat qilib beraoladigan dastur muhandisi.</p>
   </div>
@@ -626,16 +573,13 @@
       aviatorDesc: "Aviator o'yini uchun signal bashoratchi dasturi (Android uchun) Password - SYRAX",
       aviatorBtn: "Yuklab olish→",
       termsEyebrow: "Qo'llanma",
-      termsTitle: "ID Faollashtirish shartlari",
+      termsTitle: "ID Faollashtirish Qo'llanmasi",
       termsLead: "Dasturlardan foydalanishdan oldin quyidagilarni o'qib chiqing.",
       term1: `<b>Ro'yxatdan o'ting</b>SYRAX promo-kodi bilan 1win'da yangi hisob oching va 1mln so'm depozit qiling shunda 1win ID raqamingiz dasturga avtomatik faollashtiriladi`,
       term2: `<b>Dasturni yuklab oling</b>Signal bashoratchi dasturlaridan birini yuklab oling va kiring.`,
       term3: `<b>ID Password kiriting</b>1winda bizning SYRAX proma-kodimiz bilan ro'yhatdan o'tib 1mln so'm depozit qilganingizdan so'ng 1win ID raqamingiz avtomatik dasturga faollashtiriladi va login vazifasini bajaradi va shu ID raqamingizni dasturga yozib kirasiz.`,
       term4: `<b>Ko'p ishlamang</b>Signal bashoratchi dasturi yordamida 1-2ta dan ortiq ishlamang, sababi 1win kelgusi yutuqlaringizda sizdan shubhalanib akkauntingizni qora ro'yhatga qo'shib blok qilishi va qonuniy javobgarlikga olib kelishi mo'mkin.`,
       term5: `<b>Savollar?</b>Dastur nima uchun bepul va bundan sizga nma foyda? Bu dasturni faqat o'zimiz ishlatsakham bo'ladi lekin bitta verifikatsiyalangan akkauntdan ko'p pul yechsak yoki ketmaket faqat g'alaba qozonsak bukmekir bizni qora ruyhatga qo'shadi va akkauntimizni blok qiladi. Siz bizni promakodimiz bilan ro'yhatdan o'tib dasturni ishlatib foyda qilsangiz foydangizni 50% ni bukmekirni bizga o'zini yonidan o'tkazib turadi, shu sababdan bizga ko'proq foydalanuvchilar kerak va shu sababdan bizham sizham foyda qilamiz.`,
-      videoSlot: `Video qo'llanma tez orada qo'shiladi.<br>Hozircha yuqoridagi bosqichlarga amal qiling.`,
-      ageFlag: `<b>18+</b> O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelshi mo'mkin.`,
-      footerPromo: `Ro'yxatdan o'tishda promo-kod: <b>SYRAX</b>`,
       footerLegal: "SYRAX — 1win platformasi foydalanuvchilari uchun oldindan signal bashorat qilib beraoladigan dastur muhandisi.",
       contactEyebrow: "Biz bilan bog'lanish",
       contactTitle: "Ijtimoiy tarmoqlar va yordam",
@@ -663,16 +607,13 @@
       aviatorDesc: "Программа прогнозирования сигналов для игры Aviator (Для Android) Пароль - SYRAX",
       aviatorBtn: "Скачать→",
       termsEyebrow: "Инструкция",
-      termsTitle: "Условия активации ID",
+      termsTitle: "Руководство по активации ID",
       termsLead: "Перед использованием программ ознакомьтесь со следующей информацией.",
       term1: `<b>Зарегистрируйтесь</b>Откройте новый счет в 1win, используя промокод SYRAX, внесите 100$, и ваш ID-номер 1win будет автоматически активирован в программе.`,
       term2: `<b>Скачать программу</b>Загрузите одно из приложений для прогнозирования сигналов и войдите в систему.`,
       term3: `<b>Введите логин ID</b>После регистрации с нашим промокодом SYRAX на 1win и внесения депозита в размере 8000 рублей, ваш ID-номер 1win будет автоматически активирован в программе и будет использоваться в качестве логина, и вы сможете ввести этот ID-номер в программу.`,
-      term4: `<b>Не зарабатывайте слишком много денег</b>Не используйте более 1-2 сигналов в программе прогнозирования сигналов, так как 1win может заподозрить неладное в отношении ваших будущих выигрышей, внести ваш аккаунт в черный список, заблокировать его и привлечь вас к юридической ответственности.`,
+      term4: `<b>Не зарабатывайте слишком много</b>Не используйте более 1-2 сигналов в программе прогнозирования сигналов, так как 1win может заподозрить неладное в отношении ваших будущих выигрышей, внести ваш аккаунт в черный список, заблокировать его и привлечь вас к юридической ответственности.`,
       term5: `<b>Вопросы?</b>Почему программа бесплатна и в чем ее выгода для вас? Мы можем использовать эту программу только для себя, но если мы выведем много денег с одного подтвержденного аккаунта или выиграем только один раз подряд, букмекер добавит нас в черный список и заблокирует наш аккаунт. Если вы зарегистрируетесь у нас с нашим промокодом и используете программу для получения прибыли, букмекер переведет нам 50% вашей прибыли, поэтому нам нужно больше пользователей, и поэтому выгода есть для нас обоих.`,
-      videoSlot: `Видеоинструкция появится позже.<br>А пока следуйте шагам выше.`,
-      ageFlag: `<b>18+</b> Результаты игры определяются на основе генератора случайных чисел (ГСЧ), и наша программа имеет возможность предсказывать этот генератор чисел заранее, что является незаконным и может повлечь за собой юридическую ответственность.`,
-      footerPromo: `Промокод при регистрации: <b>SYRAX</b>`,
       footerLegal: "SYRAX — инженер-программист, способный прогнозировать сигналы заранее для пользователей платформы 1win.",
       contactEyebrow: "Связаться с нами",
       contactTitle: "Социальные сети и поддержка",
@@ -700,16 +641,13 @@
       aviatorDesc: "Signal predictor app for the Aviator game (for Android) Password - SYRAX",
       aviatorBtn: "Download→",
       termsEyebrow: "Guide",
-      termsTitle: "ID Activation Terms",
+      termsTitle: "ID Activation Guide",
       termsLead: "Please read the following before using the programs.",
       term1: `<b>Sign up</b>Open a new account at 1win with the SYRAX promo code and deposit 100$, and your 1win ID number will be automatically activated in the program.`,
       term2: `<b>Download the program</b>Download one of the signal prediction apps and log in.`,
       term3: `<b>Enter ID Password</b>After you register with our SYRAX promo code on 1win and deposit 100$, your 1win ID number will be automatically activated in the program and will act as a login, and you can enter this ID number into the program.`,
       term4: `<b>Don't work too hard.</b>Do not work with more than 1-2 signals using the signal predictor program, because 1win may become suspicious of your future winnings, blacklist your account, block it, and bring you to legal liability.`,
       term5: `<b>Questions.</b>Why is the program free and what is the benefit to you? We can use this program only for ourselves, but if we withdraw a lot of money from one verified account or if we win only once in a row, the bookmaker will add us to the blacklist and block our account. If you register with us with our promo code and use the program to make a profit, the bookmaker will transfer 50% of your profit to us, that's why we need more users and that's why we both benefit.`,
-      videoSlot: `A video guide is coming soon.<br>For now, follow the steps above.`,
-      ageFlag: `<b>18+</b>The game results are determined based on a random number generator (RNG), and our program has the ability to predict this number generator in advance, which is illegal and may result in legal liability`,
-      footerPromo: `Promo code at sign-up: <b>SYRAX</b>`,
       footerLegal: "SYRAX — a software engineer who can predict signals in advance for users of the 1win platform.",
       contactEyebrow: "Contact us",
       contactTitle: "Social networks and support",
