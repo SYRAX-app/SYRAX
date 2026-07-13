@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SYRAX — Lucky Jet & Aviator | Syrax rasmiy sayti</title>
+<title>SYRAX — Lucky Jet & Aviator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -404,10 +404,6 @@
   .footer-inner{
     display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
   }
-  .footer-promo{
-    font-size:13px;color:var(--text-muted);
-  }
-  .footer-promo b{color:var(--neon-green);font-family:'Unbounded',sans-serif;}
   .footer-legal{
     font-size:11px;color:var(--text-muted);
     max-width:640px;
@@ -457,9 +453,9 @@
       <p class="lead" data-i18n="heroLead">Lucky Jet va Aviator signal bashoratchi dasturlarimizni yuklab oling va ular yordamida signallarni oldindan ko'rib foyda qiling. (Bizda barchasi bepul).</p>
       <div class="cta-row">
         <a href="https://lkus.cc/742a53ba" class="btn btn-primary" id="mainCta" data-i18n="heroCtaPrimary">1win'ga o'tish →</a>
-        <a href="games" class="btn btn-ghost" data-i18n="heroCtaGhost">Dasturlarni ko'rish</a>
-        
-              <p class="disclaimer-line" data-i18n="heroDisclaimer"></p>
+        <a href="#games" class="btn btn-ghost" data-i18n="heroCtaGhost">Dasturlarni ko'rish</a>
+      </div>
+      <p class="disclaimer-line" data-i18n="heroDisclaimer">18+ O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelshi mo'mkin.</p>
     </div>
 
     <div class="curve-card">
@@ -480,6 +476,8 @@
   <section id="games">
     <div class="section-head">
       <span class="section-eyebrow" data-i18n="gamesEyebrow">Bizning dasturlar</span>
+      <h2 data-i18n="gamesTitle">Ikkita o'yin, bitta kirish nuqtasi</h2>
+      <p data-i18n="gamesLead">Har ikkala dastur ham to'g'ridan-to'g'ri 1win platformasidagi tegishli o'yinlar uchun maxsus ishlab chiqarilgan</p>
     </div>
 
     <div class="games">
@@ -513,7 +511,9 @@
 <div class="wrap">
   <section id="terms">
     <div class="section-head">
-      <span class="section-eyebrow" data-i18n="termsEyebrow">ID faollashtirish Qo'llanmasi</span>
+      <span class="section-eyebrow" data-i18n="termsEyebrow">Qo'llanma</span>
+      <h2 data-i18n="termsTitle">ID Faollashtirish Qo'llanmasi</h2>
+      <p data-i18n="termsLead">Dasturlardan foydalanishdan oldin quyidagilarni o'qib chiqing.</p>
     </div>
 
     <div class="terms-box">
@@ -539,10 +539,11 @@
   <section id="contact">
     <div class="section-head">
       <span class="section-eyebrow" data-i18n="contactEyebrow">Biz bilan bog'lanish</span>
+      <h2 data-i18n="contactTitle">Ijtimoiy tarmoqlar va yordam</h2>
+      <p data-i18n="contactLead">Bizni kuzatib boring va har qanday savolingiz bo'lsa yozing.</p>
     </div>
 
     <div class="contact-grid">
-      <!-- Instagram -->
       <a href="https://instagram.com/syraxapp" target="_blank" class="contact-card" style="text-decoration:none;">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -552,11 +553,10 @@
           </svg>
         </span>
         <h4>Instagram</h4>
-        <p>@syraxappl</p>
-        <span class="btn-small">Kuzatib borish</span>
+        <p>@syraxapp</p>
+        <span class="btn-small" data-i18n="contactFollow">Kuzatib borish</span>
       </a>
 
-      <!-- Telegram Kanal -->
       <a href="https://t.me/syraxapp" target="_blank" class="contact-card telegram" style="text-decoration:none;">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -566,11 +566,10 @@
           </svg>
         </span>
         <h4>Telegram Kanal</h4>
-        <p>Yangiliklar va yangilanishlar</p>
-        <span class="btn-small">Obuna bo'lish</span>
+        <p data-i18n="contactTelegramDesc">Yangiliklar va yangilanishlar</p>
+        <span class="btn-small" data-i18n="contactSubscribe">Obuna bo'lish</span>
       </a>
 
-      <!-- Telegram Support / Chat Bot -->
       <a href="https://t.me/syrax_support_bot" target="_blank" class="contact-card support" style="text-decoration:none;">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -578,9 +577,9 @@
             <path d="M9 12l2 2 4-4"/>
           </svg>
         </span>
-        <h4>Yordam boti</h4>
-        <p>Support xizmati</p>
-        <span class="btn-small">Xabar yozish</span>
+        <h4 data-i18n="contactSupportTitle">Yordam boti</h4>
+        <p data-i18n="contactSupportDesc">Support xizmati</p>
+        <span class="btn-small" data-i18n="contactWrite">Xabar yozish</span>
       </a>
     </div>
   </section>
@@ -589,7 +588,7 @@
 <footer>
   <div class="wrap">
     <div class="footer-inner">
-      <div class="logo" style="font-size:18px;">SYRA<span>X</span></div>      
+      <div class="logo" style="font-size:18px;">SYRA<span>X</span></div>
     </div>
     <p class="footer-legal" data-i18n="footerLegal">SYRAX — 1win platformasi foydalanuvchilari uchun oldindan signal bashorat qilib beraoladigan dastur muhandisi.</p>
   </div>
@@ -603,7 +602,7 @@
       heroLead: "Lucky Jet va Aviator signal bashoratchi dasturlarimizni yuklab oling va ular yordamida signallarni oldindan ko'rib foyda qiling. (Bizda barchasi bepul).",
       heroCtaPrimary: "1win'ga o'tish →",
       heroCtaGhost: "Dasturlarni ko'rish",
-      heroDisclaimer: "",
+      heroDisclaimer: "18+ O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelshi mo'mkin.",
       curveLabel: "Jonli koeffitsient",
       curveFlying: "Uchish boshlandi...",
       curveCrashedPrefix: "Uchdi! x",
@@ -619,7 +618,7 @@
       aviatorDesc: "Aviator o'yini uchun signal bashoratchi dasturi (Android uchun) Password - SYRAX",
       aviatorBtn: "Yuklab olish→",
       termsEyebrow: "Qo'llanma",
-      termsTitle: "ID Faollashtirish shartlari",
+      termsTitle: "ID Faollashtirish Qo'llanmasi",
       termsLead: "Dasturlardan foydalanishdan oldin quyidagilarni o'qib chiqing.",
       term1: `<b>Ro'yxatdan o'ting</b>SYRAX promo-kodi bilan 1win'da yangi hisob oching va 1mln so'm depozit qiling shunda 1win ID raqamingiz dasturga avtomatik faollashtiriladi`,
       term2: `<b>Dasturni yuklab oling</b>Signal bashoratchi dasturlaridan birini yuklab oling va kiring.`,
@@ -630,7 +629,14 @@
       ageFlag: `<b>18+</b> O'yin natijalari tasodifiy son generatori (RNG) asosida aniqlanadi, bizning dasturda esa bu son generatorini oldindan aniqlash imkoniyati mavjud bo'lib bu noqonuniy hisoblanadi va qonuniy javobgarlikga olib kelshi mo'mkin.`,
       footerLegal: "SYRAX — 1win platformasi foydalanuvchilari uchun oldindan signal bashorat qilib beraoladigan dastur muhandisi.",
       contactEyebrow: "Biz bilan bog'lanish",
-      
+      contactTitle: "Ijtimoiy tarmoqlar va yordam",
+      contactLead: "Bizni kuzatib boring va har qanday savolingiz bo'lsa yozing.",
+      contactFollow: "Kuzatib borish",
+      contactTelegramDesc: "Yangiliklar va yangilanishlar",
+      contactSubscribe: "Obuna bo'lish",
+      contactSupportTitle: "Yordam boti",
+      contactSupportDesc: "Support xizmati",
+      contactWrite: "Xabar yozish"
     },
     ru: {
       heroEyebrow: "Официальный сайт SYRAX",
@@ -638,7 +644,7 @@
       heroLead: "Скачайте наши программы для прогнозирования сигналов Lucky Jet и Aviator и используйте их для предварительного просмотра сигналов и получения прибыли. (Все бесплатно).",
       heroCtaPrimary: "Перейти на 1win →",
       heroCtaGhost: "Посмотреть программы",
-      heroDisclaimer: "",
+      heroDisclaimer: "18+ Результаты игры определяются на основе генератора случайных чисел (ГСЧ), и наша программа имеет возможность предсказывать этот генератор чисел заранее, что является незаконным и может повлечь за собой юридическую ответственность.",
       curveLabel: "Коэффициент в реальном времени",
       curveFlying: "Полёт начался...",
       curveCrashedPrefix: "Улетел! x",
@@ -654,18 +660,25 @@
       aviatorDesc: "Программа прогнозирования сигналов для игры Aviator (Для Android) Пароль - SYRAX",
       aviatorBtn: "Скачать→",
       termsEyebrow: "Инструкция",
-      termsTitle: "Условия активации ID",
+      termsTitle: "Руководство по активации ID",
       termsLead: "Перед использованием программ ознакомьтесь со следующей информацией.",
       term1: `<b>Зарегистрируйтесь</b>Откройте новый счет в 1win, используя промокод SYRAX, внесите 100$, и ваш ID-номер 1win будет автоматически активирован в программе.`,
       term2: `<b>Скачать программу</b>Загрузите одно из приложений для прогнозирования сигналов и войдите в систему.`,
       term3: `<b>Введите логин ID</b>После регистрации с нашим промокодом SYRAX на 1win и внесения депозита в размере 8000 рублей, ваш ID-номер 1win будет автоматически активирован в программе и будет использоваться в качестве логина, и вы сможете ввести этот ID-номер в программу.`,
-      term4: `<b>Не зарабатывайте слишком много денег</b>Не используйте более 1-2 сигналов в программе прогнозирования сигналов, так как 1win может заподозрить неладное в отношении ваших будущих выигрышей, внести ваш аккаунт в черный список, заблокировать его и привлечь вас к юридической ответственности.`,
+      term4: `<b>Не зарабатывайте слишком много</b>Не используйте более 1-2 сигналов в программе прогнозирования сигналов, так как 1win может заподозрить неладное в отношении ваших будущих выигрышей, внести ваш аккаунт в черный список, заблокировать его и привлечь вас к юридической ответственности.`,
       term5: `<b>Вопросы?</b>Почему программа бесплатна и в чем ее выгода для вас? Мы можем использовать эту программу только для себя, но если мы выведем много денег с одного подтвержденного аккаунта или выиграем только один раз подряд, букмекер добавит нас в черный список и заблокирует наш аккаунт. Если вы зарегистрируетесь у нас с нашим промокодом и используете программу для получения прибыли, букмекер переведет нам 50% вашей прибыли, поэтому нам нужно больше пользователей, и поэтому выгода есть для нас обоих.`,
       videoSlot: `Видеоинструкция появится позже.<br>А пока следуйте шагам выше.`,
       ageFlag: `<b>18+</b> Результаты игры определяются на основе генератора случайных чисел (ГСЧ), и наша программа имеет возможность предсказывать этот генератор чисел заранее, что является незаконным и может повлечь за собой юридическую ответственность.`,
-      
       footerLegal: "SYRAX — инженер-программист, способный прогнозировать сигналы заранее для пользователей платформы 1win.",
       contactEyebrow: "Связаться с нами",
+      contactTitle: "Социальные сети и поддержка",
+      contactLead: "Следите за нами и пишите, если у вас есть вопросы.",
+      contactFollow: "Подписаться",
+      contactTelegramDesc: "Новости и обновления",
+      contactSubscribe: "Подписаться",
+      contactSupportTitle: "Бот поддержки",
+      contactSupportDesc: "Служба поддержки",
+      contactWrite: "Написать"
     },
     en: {
       heroEyebrow: "Official site SYRAX",
@@ -673,7 +686,7 @@
       heroLead: "Download our Lucky Jet and Aviator signal predictor programs and use them to preview signals and profit (we have them all for free).",
       heroCtaPrimary: "Go to 1win →",
       heroCtaGhost: "View programs",
-      heroDisclaimer: "",
+      heroDisclaimer: "18+ The game results are determined based on a random number generator (RNG), and our program has the ability to predict this number generator in advance, which is illegal and may result in legal liability",
       curveLabel: "Live coefficient",
       curveFlying: "Flight in progress...",
       curveCrashedPrefix: "Flew away! x",
@@ -689,7 +702,7 @@
       aviatorDesc: "Signal predictor app for the Aviator game (for Android) Password - SYRAX",
       aviatorBtn: "Download→",
       termsEyebrow: "Guide",
-      termsTitle: "ID Activation Terms",
+      termsTitle: "ID Activation Guide",
       termsLead: "Please read the following before using the programs.",
       term1: `<b>Sign up</b>Open a new account at 1win with the SYRAX promo code and deposit 100$, and your 1win ID number will be automatically activated in the program.`,
       term2: `<b>Download the program</b>Download one of the signal prediction apps and log in.`,
@@ -698,9 +711,16 @@
       term5: `<b>Questions.</b>Why is the program free and what is the benefit to you? We can use this program only for ourselves, but if we withdraw a lot of money from one verified account or if we win only once in a row, the bookmaker will add us to the blacklist and block our account. If you register with us with our promo code and use the program to make a profit, the bookmaker will transfer 50% of your profit to us, that's why we need more users and that's why we both benefit.`,
       videoSlot: `A video guide is coming soon.<br>For now, follow the steps above.`,
       ageFlag: `<b>18+</b>The game results are determined based on a random number generator (RNG), and our program has the ability to predict this number generator in advance, which is illegal and may result in legal liability`,
-   
       footerLegal: "SYRAX — a software engineer who can predict signals in advance for users of the 1win platform.",
       contactEyebrow: "Contact us",
+      contactTitle: "Social networks and support",
+      contactLead: "Follow us and write if you have any questions.",
+      contactFollow: "Follow",
+      contactTelegramDesc: "News and updates",
+      contactSubscribe: "Subscribe",
+      contactSupportTitle: "Support bot",
+      contactSupportDesc: "Support service",
+      contactWrite: "Write message"
     }
   };
 
